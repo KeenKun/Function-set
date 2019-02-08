@@ -62,6 +62,7 @@ BEGIN_MESSAGE_MAP(CFunctionsetDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON_COMPRESSION_DISPLAY, &CFunctionsetDlg::OnBnClickedButtonCompressionDisplay)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +153,11 @@ HCURSOR CFunctionsetDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CFunctionsetDlg::OnBnClickedButtonCompressionDisplay()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	CCompressionDisplay newdlg;
+	newdlg.DoModal();
+}
